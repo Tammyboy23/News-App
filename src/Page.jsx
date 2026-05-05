@@ -41,7 +41,7 @@ function Page() {
       <div className="top">
         <h1>TAMMY <span>NEWS</span></h1>
         <input
-          type="text"
+          type="search"
           value={search}
           placeholder="Search stories..."
           onChange={(e) => setsearch(e.target.value)}
