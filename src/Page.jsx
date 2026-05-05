@@ -31,6 +31,7 @@ function Page(){
                     <h1>{article.description}</h1>
                     <p>{article.content}</p>
                     <h5>{article.source.name}</h5>
+                    <a href={article.url}>View More ...</a>
                 </div>
             ))}
         </div>
