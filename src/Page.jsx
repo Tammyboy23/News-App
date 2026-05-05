@@ -47,7 +47,7 @@ function Page() {
           onChange={(e) => setsearch(e.target.value)}
         />
         <button onClick={() => setdarkmode(!darkmode)}>
-          {darkmode ? "🌙" : "☀️"}
+          {darkmode ? "☀️" : "🌙"}
         </button>
       </div>
 
