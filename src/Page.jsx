@@ -28,6 +28,7 @@ function Page(){
         }
         else{
             document.body.classList.remove('dark');
+            document.body.classList.add('light');
         }
     },[darkmode])
     return(
