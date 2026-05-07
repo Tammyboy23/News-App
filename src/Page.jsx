@@ -48,6 +48,7 @@ function Page() {
       month: "short", day: "numeric", year: "numeric",
     });
 
+
   return (
     <>
       <div className="top">
@@ -73,7 +74,7 @@ function Page() {
         {extra}
       </div>
       <div className="container">
-        {news.map((article, index) => (
+        {news && news.map((article, index) => (
           <div key={index} className="box">
             {article.urlToImage && (
               <img src={article.urlToImage} alt="" />

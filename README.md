@@ -62,3 +62,7 @@ npm run dev
 ## License
 
 MIT
+## Search
+```bash
+Fagboyegun Oluwatamilore
+```
