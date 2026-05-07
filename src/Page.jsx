@@ -93,6 +93,7 @@ function Page() {
             </div>
           </div>
         ))}
+        <p>{topics.lenght}</p>
       </div>
     </>
   );

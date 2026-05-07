@@ -8,4 +8,5 @@ export const topics = [
     "Movies",
     "Business",
     "Economy",
+    "Anime",
 ];
