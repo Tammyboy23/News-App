@@ -254,3 +254,20 @@ body {
     padding: 24px 24px;
   }
 }
+.topics{
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+  padding: 20px;
+  overflow-x: auto;
+}
+.tops{
+  background: var(--box);
+  border-radius: 14px;
+  padding: 13px;
+  border: 1px solid var(--input-border);
+  cursor: pointer;
+}
+.tops:hover{
+  background: var(--shadow);
+}

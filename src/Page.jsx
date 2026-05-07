@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { topics } from "./topics";
 
 function Page() {
   const [news, setnews] = useState([]);
   const [search, setsearch] = useState("");
   const [darkmode, setdarkmode] = useState(true);
+  const [extra, setextra] = useState("");
 
   useEffect(() => {
     const get = async () => {
@@ -11,15 +13,25 @@ function Page() {
       let some;
       if (search) {
         some = `everything?q=${search}`;
-      } else {
+      }
+      else if(search == "Latest"){
+        some = `top-headlines?country=us`;
+      }
+       else {
         some = `top-headlines?country=us`;
       }
       const res = await fetch(`https://newsapi.org/v2/${some}&apiKey=${API_KEY}`);
       const data = await res.json();
       setnews(data.articles);
+      if (news == []){
+        setextra("No News Found")
+      }
+      else{
+        setextra("")
+      }
     };
     get();
-  }, [search]);
+  }, [search, news]);
 
   useEffect(() => {
     if (darkmode) {
@@ -50,7 +62,16 @@ function Page() {
           {darkmode ? "☀️" : "🌙"}
         </button>
       </div>
-
+      <div className="topics">
+        {topics.map((topic) => (
+          <div className="tops" key={topic.id} onClick={() => setsearch(topic)}>
+            {topic}
+          </div>
+        ))}
+      </div>
+      <div className="extr">
+        {extra}
+      </div>
       <div className="container">
         {news.map((article, index) => (
           <div key={index} className="box">
